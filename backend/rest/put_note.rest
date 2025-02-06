@@ -1,0 +1,7 @@
+PUT http://localhost:3000/notes/674b1623a43fdb2d69e81589
+Content-Type: application/json
+
+{
+    "header": "otsikko",
+    "text": "tekstiä"
+}

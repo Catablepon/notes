@@ -1,0 +1,7 @@
+POST http://localhost:3000/notes
+Content-Type: application/json
+
+{
+    "header": "Does this work?",
+    "text": "Testing if this works"
+}
