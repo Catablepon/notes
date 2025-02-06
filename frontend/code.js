@@ -12,7 +12,7 @@ function init() {
 
 async function fetchAndShowNotes() {
     try {
-        let response = await fetch('http://localhost:3000/notes')
+        let response = await fetch('https://notes-server-y4xk.onrender.com/notes')
         let notes = await response.json()
         showNotes(notes)
     } catch (error) {
@@ -113,7 +113,7 @@ async function createNote(note) {
         notesContainer.insertBefore(noteDiv, notesContainer.firstChild)
     
         
-        const response = await fetch('http://localhost:3000/notes', {
+        const response = await fetch('https://notes-server-y4xk.onrender.com/notes', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -190,7 +190,7 @@ async function showNotes(notes) {
 
 async function removeNote(id) {
     try {
-        const response = await fetch('http://localhost:3000/notes/'+id, {
+        const response = await fetch('https://notes-server-y4xk.onrender.com/notes/'+id, {
             method: 'DELETE'
         })
         if (response.ok) {
@@ -213,7 +213,7 @@ async function removeNote(id) {
 
 async function updateNote(id, updatedHeader, updatedText) {
     try {
-        const response = await fetch('http://localhost:3000/notes/'+id, {
+        const response = await fetch('https://notes-server-y4xk.onrender.com/notes/'+id, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
